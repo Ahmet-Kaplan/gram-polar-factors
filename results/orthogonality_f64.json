@@ -1,0 +1,77 @@
+{
+  "rho": 0.15,
+  "n_submatrices": 24,
+  "rows": [
+    {
+      "method": "Exact SVD",
+      "median_err_f64": 2.3113683022312527e-15,
+      "max_err_f64": 2.6676023654243872e-15,
+      "median_err_f32_metric": 1.010827404002157e-07,
+      "metric_inflation": 43732857.41724356,
+      "smax_median": 1.0,
+      "smin_median": 0.9999999999999986,
+      "ms": 3.6157084008057914
+    },
+    {
+      "method": "Gram eigen (ours)",
+      "median_err_f64": 1.782623405995422e-10,
+      "max_err_f64": 4.085635085950184e-09,
+      "median_err_f32_metric": 1.0020339047400739e-07,
+      "metric_inflation": 562.1119420792836,
+      "smax_median": 1.0,
+      "smin_median": 0.9999999993757396,
+      "ms": 0.5227636235455672
+    },
+    {
+      "method": "Polar Express (5)",
+      "median_err_f64": 1.4962184707516193,
+      "max_err_f64": 1.8225914861883312,
+      "median_err_f32_metric": 1.4962182641029358,
+      "metric_inflation": 0.999999861886023,
+      "smax_median": 1.0,
+      "smin_median": 0.006446185267349507,
+      "ms": 1.3932082802057266
+    },
+    {
+      "method": "Polar Express (8)",
+      "median_err_f64": 1.1875188364372218,
+      "max_err_f64": 1.4022552471194074,
+      "median_err_f32_metric": 1.1875187754631042,
+      "metric_inflation": 0.9999999486541892,
+      "smax_median": 1.0,
+      "smin_median": 0.10341125741698962,
+      "ms": 1.4870972372591496
+    },
+    {
+      "method": "Gram-NS (Dion3)",
+      "median_err_f64": 0.9978673753907881,
+      "max_err_f64": 1.4876392206548141,
+      "median_err_f32_metric": 0.9978673458099365,
+      "metric_inflation": 0.9999999703559288,
+      "smax_median": 1.0,
+      "smin_median": 1.181984945110705e-08,
+      "ms": 1.1478057131171227
+    },
+    {
+      "method": "NS quintic (Muon, ref)",
+      "median_err_f64": 0.6486913657738873,
+      "max_err_f64": 0.8792126985575469,
+      "median_err_f32_metric": 0.6486914455890656,
+      "metric_inflation": 1.0000001230402968,
+      "smax_median": 1.0,
+      "smin_median": 0.12985782926444803,
+      "ms": 1.0070969971517723
+    },
+    {
+      "method": "NS quintic + clamp (ours)",
+      "median_err_f64": 746.2124146286117,
+      "max_err_f64": 113605.23493941533,
+      "median_err_f32_metric": 746.2116270065308,
+      "metric_inflation": 0.999998944506865,
+      "smax_median": 1.0,
+      "smin_median": 0.023270322443570322,
+      "ms": 2.4740553150574365
+    }
+  ],
+  "note": "median_err_f64 is the value to quote. median_err_f32_metric reproduces the historical table and shows the measurement floor. ms is carried over from results/baseline_orth.json."
+}

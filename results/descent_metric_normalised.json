@@ -1,0 +1,48 @@
+{
+  "definition": "eta(U,B) = <U,B> / (||U||_2 ||B||_*)",
+  "rows": [
+    {
+      "name": "exact polar (optimal)",
+      "eta": 0.9999999999999993,
+      "orth_err": 2.3113683022312527e-15,
+      "orth_err_source": "results/orthogonality_f64.json",
+      "n_matrices": 24
+    },
+    {
+      "name": "Polar Express 5",
+      "eta": 0.4673804377334664,
+      "orth_err": 1.4962184707516193,
+      "orth_err_source": "results/orthogonality_f64.json",
+      "n_matrices": 24
+    },
+    {
+      "name": "Polar Express 8",
+      "eta": 0.5263833852323356,
+      "orth_err": 1.1875188364372218,
+      "orth_err_source": "results/orthogonality_f64.json",
+      "n_matrices": 24
+    },
+    {
+      "name": "Muon quintic K=5",
+      "eta": 0.6215559876486892,
+      "orth_err": 0.6486913657738873,
+      "orth_err_source": "results/orthogonality_f64.json",
+      "n_matrices": 24
+    },
+    {
+      "name": "Muon quintic K=3",
+      "eta": 0.6193051476038224,
+      "orth_err": 0.9297043300119792,
+      "orth_err_source": "recomputed",
+      "n_matrices": 24
+    },
+    {
+      "name": "raw normalized B",
+      "eta": 0.7501611059063826,
+      "orth_err": 0.9910952576969922,
+      "orth_err_source": "recomputed",
+      "n_matrices": 24
+    }
+  ],
+  "note": "Recomputes results/descent_metric.json, whose eta omits the ||U||_2 factor and is therefore unbounded."
+}

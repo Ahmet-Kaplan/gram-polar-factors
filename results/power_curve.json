@@ -1,0 +1,56 @@
+{
+  "alpha": 0.05,
+  "target_power": 0.8,
+  "k": 4,
+  "n_per_arm_reported": 3,
+  "sigma_within": 0.009957962365111456,
+  "observed_spread_nats": 0.004104808966318929,
+  "observed_f": 0.1640268577713527,
+  "published_mdd": 0.022765798227537333,
+  "published_mdd_recomputed_two_sample_normal": 0.022778687068861072,
+  "published_mdd_is_two_sample_normal": true,
+  "published_mdd_power_global": 0.47355173848720267,
+  "mdd_global_n3": 0.032686275230697136,
+  "mdd_pairwise_n3": 0.030579835365583216,
+  "n_for_observed_spread": 117,
+  "runs_for_observed_spread": 468,
+  "table": [
+    {
+      "delta_nats": 0.005,
+      "f": 0.18712563001627378,
+      "n_per_arm": 79,
+      "total_runs": 316
+    },
+    {
+      "delta_nats": 0.01,
+      "f": 0.37425126003254755,
+      "n_per_arm": 21,
+      "total_runs": 84
+    },
+    {
+      "delta_nats": 0.02,
+      "f": 0.7485025200650951,
+      "n_per_arm": 6,
+      "total_runs": 24
+    },
+    {
+      "delta_nats": 0.03,
+      "f": 1.1227537800976426,
+      "n_per_arm": 4,
+      "total_runs": 16
+    },
+    {
+      "delta_nats": 0.033,
+      "f": 1.2350291581074069,
+      "n_per_arm": 3,
+      "total_runs": 12
+    },
+    {
+      "delta_nats": 0.05,
+      "f": 1.8712563001627378,
+      "n_per_arm": 3,
+      "total_runs": 12
+    }
+  ],
+  "verdict": "the design bounds effects at 0.033 nats globally (0.031 pairwise), not 0.023; detecting the observed 0.0041-nat spread needs ~117 seeds per arm (468 runs, 39x the runs in use)"
+}

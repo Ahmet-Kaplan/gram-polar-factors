@@ -1,0 +1,28 @@
+{
+  "config": {
+    "theta": 1e-07,
+    "n_matrices": 16,
+    "machine": "x86_64"
+  },
+  "relative_update_difference": {
+    "exact_fp32": {
+      "median": 0.614624762625511,
+      "min": 0.03405355714291525,
+      "max": 1.1410870257968309
+    },
+    "trunc_fp64": {
+      "median": 0.8645166684760817,
+      "min": 0.3454121120544108,
+      "max": 1.0704579709173525
+    },
+    "trunc_fp32": {
+      "median": 0.05090209529710614,
+      "min": 0.010804295289587013,
+      "max": 0.15191873899288189
+    }
+  },
+  "verdict": {
+    "truncation_reduces_precision_sensitivity": 12.07464563173794,
+    "prediction_holds": true
+  }
+}

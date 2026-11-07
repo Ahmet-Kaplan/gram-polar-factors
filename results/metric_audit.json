@@ -1,0 +1,177 @@
+{
+  "eta_orth_spearman": {
+    "rho": 0.8285714285714287,
+    "n": 6,
+    "leave_one_out_min": 0.7,
+    "leave_one_out_max": 0.965218505335508
+  },
+  "power": {
+    "matched_pair_gap": 0.0019143164157867654,
+    "seed_sd_10.7M": 0.0085,
+    "effect_in_sigma": 0.22521369597491356,
+    "seeds_needed_per_arm_80pct": 310
+  },
+  "rows": [
+    {
+      "method": "Exact Gram",
+      "orth_err": 2.3113683022312527e-15,
+      "eta": 0.9999999999999993,
+      "update_norm": 0.00437,
+      "val_loss": 0.588255962729454,
+      "metric_shape": "rho=0.15",
+      "run_shape": "rho=0.15",
+      "scale": "49.7M, 1 seed"
+    },
+    {
+      "method": "Polar Express, 5 steps",
+      "orth_err": 1.4962184707516193,
+      "eta": 0.4673804377334664,
+      "update_norm": 0.00437,
+      "val_loss": 0.5863416463136673,
+      "metric_shape": "rho=0.15",
+      "run_shape": "rho=0.15",
+      "scale": "49.7M, 1 seed"
+    },
+    {
+      "method": "Muon quintic, K=5",
+      "orth_err": 0.6486913657738873,
+      "eta": 0.6215559876486892,
+      "update_norm": 0.00437,
+      "val_loss": 2.416162431240082,
+      "metric_shape": "rho=0.15",
+      "run_shape": "full shape",
+      "scale": "49.7M, 1 seed"
+    },
+    {
+      "method": "AdamW (matched, 8.56e-4)",
+      "orth_err": null,
+      "eta": null,
+      "update_norm": 0.00437,
+      "val_loss": 0.5558968365192414,
+      "metric_shape": "none: no orthogonalizer",
+      "run_shape": "n/a",
+      "scale": "49.7M, 1 seed"
+    }
+  ],
+  "ranks": {
+    "orth_err": [
+      0,
+      2,
+      1,
+      -1
+    ],
+    "eta": [
+      0,
+      2,
+      1,
+      -1
+    ],
+    "update_norm": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "val_loss": [
+      2,
+      1,
+      3,
+      0
+    ]
+  },
+  "n_fully_reported": 3,
+  "kendall_tau_vs_loss": {
+    "orth_err": -0.3333333333333333,
+    "eta": -0.3333333333333333
+  },
+  "reversals_vs_loss": {
+    "orth_err": 3,
+    "eta": 3
+  },
+  "update_norm_by_group": {
+    "AdamW (matched, 8.56e-4)": 0.00437,
+    "AdamW (3e-4)": 0.00153,
+    "all orthogonalizers at their tuned lr": 0.00437
+  },
+  "within_family_10.7M": {
+    "gram (seed 0)": 1.5005737662315368,
+    "ns quintic on the subsampled matrix (seed 0)": 1.4997520685195922,
+    "orth_err gram": 2.3113683022312527e-15,
+    "orth_err ns quintic": 0.6486913657738873,
+    "seed_sd_within_optimizer": 0.006836098675321829,
+    "abs_gap": 0.0008216977119446245,
+    "gap_in_seed_sd": 0.1201998026902297
+  },
+  "end_to_end_sources": {
+    "Polar Express, 5 steps": {
+      "val_loss": 0.5863416463136673,
+      "n_params": 49656960,
+      "source": "results/gpu_server/final_pe_1e4.json"
+    },
+    "Exact Gram": {
+      "val_loss": 0.588255962729454,
+      "n_params": 49656960,
+      "source": "results/gpu_server/opt_csmuon_cuda.json"
+    },
+    "Muon quintic, K=5": {
+      "val_loss": 2.416162431240082,
+      "n_params": 49656960,
+      "source": "results/gpu_server/final_muonns.json"
+    },
+    "AdamW (3e-4)": {
+      "val_loss": 0.5915944784879684,
+      "n_params": 49656960,
+      "source": "results/gpu_server/final_adamw.json"
+    },
+    "AdamW (matched, 8.56e-4)": {
+      "val_loss": 0.5558968365192414,
+      "n_params": 49656960,
+      "source": "results/gpu_server/ctl_adamw_856.json"
+    }
+  },
+  "eta_normalised": [
+    {
+      "name": "exact polar (optimal)",
+      "eta": 0.9999999999999993,
+      "orth_err": 2.3113683022312527e-15,
+      "orth_err_source": "results/orthogonality_f64.json",
+      "n_matrices": 24
+    },
+    {
+      "name": "Polar Express 5",
+      "eta": 0.4673804377334664,
+      "orth_err": 1.4962184707516193,
+      "orth_err_source": "results/orthogonality_f64.json",
+      "n_matrices": 24
+    },
+    {
+      "name": "Polar Express 8",
+      "eta": 0.5263833852323356,
+      "orth_err": 1.1875188364372218,
+      "orth_err_source": "results/orthogonality_f64.json",
+      "n_matrices": 24
+    },
+    {
+      "name": "Muon quintic K=5",
+      "eta": 0.6215559876486892,
+      "orth_err": 0.6486913657738873,
+      "orth_err_source": "results/orthogonality_f64.json",
+      "n_matrices": 24
+    },
+    {
+      "name": "Muon quintic K=3",
+      "eta": 0.6193051476038224,
+      "orth_err": 0.9297043300119792,
+      "orth_err_source": "recomputed",
+      "n_matrices": 24
+    },
+    {
+      "name": "raw normalized B",
+      "eta": 0.7501611059063826,
+      "orth_err": 0.9910952576969922,
+      "orth_err_source": "recomputed",
+      "n_matrices": 24
+    }
+  ],
+  "note": "n is the number of methods for which orthogonality error, eta, update magnitude and final loss were all measured at one scale. At n=3 an ordering is descriptive; no p-value is reported."
+}
